@@ -1,0 +1,14 @@
+class Solution {
+    fun climbStairs(n: Int): Int {
+        val arr = mutableListOf(1, 2)        
+        var idx = 2
+        
+        while (idx < n)    {
+            arr.add(arr.get(idx-1) + arr.get(idx-2))
+            idx++
+        }
+        return arr.get(n-1)
+    }
+    
+    
+}
